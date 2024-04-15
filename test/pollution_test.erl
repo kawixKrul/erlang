@@ -177,7 +177,7 @@ get_daily_mean_test() ->
   M7 = pollution:add_value("Stacja 1", {{2023,3,28},{11,16,16}}, "PM10", 2000, M6),
   M8 = pollution:add_value("Stacja 2", {{2023,3,28},{11,16,17}}, "PM10", 3000, M7),
 
-  M9 = pollution:add_value("Stacja 3", {{2023,3,27},{11,16,18}}, "PM10", 1234, M8),
+  M9 = pollution:add_value("Stacja 3", {{2023,3,27},{11,16,18}}, "PM25", 1234, M8),
 
   ?assertMatch(15.0, pollution:get_daily_mean("PM10",{2023,3,27}, M2)),
   ?assertMatch(15.0, pollution:get_daily_mean("PM10",{2023,3,27}, M6)),
